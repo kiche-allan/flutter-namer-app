@@ -49,6 +49,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.5"
+  english_words:
+    dependency: "direct main"
+    description:
+      name: english_words
+      sha256: "6a7ef6473a97bd8571b6b641d006a6e58a7c67e65fb6f3d6d1151cb46b0e983c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.0.0"
   fake_async:
     dependency: transitive
     description:
@@ -75,6 +83,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  intl:
+    dependency: "direct main"
+    description:
+      name: intl
+      sha256: a3715e3bc90294e971cb7dc063fbf3cd9ee0ebf8604ffeafabd9e6f16abbdbe6
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.18.0"
   js:
     dependency: transitive
     description:
@@ -115,6 +131,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.8.0"
+  nested:
+    dependency: transitive
+    description:
+      name: nested
+      sha256: "03bac4c528c64c95c722ec99280375a6f2fc708eec17c7b3f07253b626cd2a20"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
   path:
     dependency: transitive
     description:
@@ -123,6 +147,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.8.2"
+  provider:
+    dependency: "direct main"
+    description:
+      name: provider
+      sha256: "59471e0a4595e264625d3496af567ac85bdae1148ec985aff1e0555786f53ecf"
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.0.0"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -186,3 +218,4 @@ packages:
     version: "2.1.4"
 sdks:
   dart: ">=2.19.2 <3.0.0"
+  flutter: ">=1.16.0"
