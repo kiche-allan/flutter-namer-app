@@ -39,6 +39,9 @@ class MyAppState extends ChangeNotifier {
   }
 }
 
+WordPair generateWordPair() {
+}
+
 class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
