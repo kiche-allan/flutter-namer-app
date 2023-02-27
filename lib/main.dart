@@ -40,6 +40,7 @@ class MyAppState extends ChangeNotifier {
 }
 
 WordPair generateWordPair() {
+  return WordPair.random();
 }
 
 class MyHomePage extends StatelessWidget {
