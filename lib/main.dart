@@ -70,6 +70,12 @@ class BigCard extends StatelessWidget {
   Widget build(BuildContext context) {
 
     var theme = Theme.of(context);
+
+    var style = theme.textTheme.displayMedium!.copyWith(
+      color: theme.colorScheme.onPrimary,
+      fontSize: 24,
+    );
+    
     return Card(
       color: theme.colorScheme.primary,
       child: Padding(
