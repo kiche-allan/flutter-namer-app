@@ -29,6 +29,9 @@ class MyApp extends StatelessWidget {
 
 class MyAppState extends ChangeNotifier {
   var current = WordPair.random();
+  var history = <WordPair>[];
+
+  // this code creates an empty List of WordPair objects using the shorthand syntax for creating an empty List with the type parameter:
 
   void getNext() {
     current = WordPair.random();
