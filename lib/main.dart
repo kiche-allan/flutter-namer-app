@@ -72,16 +72,35 @@ class MyHomePage extends StatelessWidget {
               child: GeneratorPage(),
 
             ),
-          )
-        ]
-      )
-    )
+          ),
+        ],
+      ),
+    );
   }
 }
 
 class GeneratorPage extends StatelessWidget {
   @override
-  Widget build(BuildContext context )
+  Widget build(BuildContext context ) {
+    var appState = context.watch<MyAppState>();
+
+    var pair = appState.current;
+
+    IconData icon;
+    if (appState.favorites.contains(pair)){
+      icon = Icons.favorite;
+     } else {
+      icon = Icons.favorite_border;
+     }
+
+     return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children : [
+
+        ]
+      ),)
+  }
 }
 class BigCard extends StatelessWidget {
   const BigCard({
