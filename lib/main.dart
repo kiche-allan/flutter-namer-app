@@ -50,46 +50,39 @@ class MyAppState extends ChangeNotifier {
 class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var appState = context.watch<MyAppState>();
-    var pair = appState.current;
-
-    IconData icon;
-    if (appState.favorites.contains(pair)){
-      icon = Icons.favorite;
-    } else {
-      icon = Icons.favorite_border;
-    }
-
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            BigCard(pair: pair),
-            SizedBox(height: 10),
-            Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                ElevatedButton(
-                    onPressed: () {
-                      appState.getNext();
-                    },
-                    child: Text('Like')),
-                    ElevatedButton(
-                    onPressed: () {
-                      appState.getNext();
-                    },
-                    child: Text('Next')),
-
+      body: Row(
+        children :[
+          SafeArea(
+            child: NavigationRail(
+              extended: false,
+              destinations: [
+                NavigationRailDestination(icon: Icon(Icons.home), label: Text('Home'),),
+                NavigationRailDestination(icon: Icon(Icons.home), label: Text('Favorites'),),         ]
               ],
-            )
-          ],
-        ),
-      ),
-    );
+              selectedIndex: 0,
+              onDestinationSelected: (value) {
+                print('selected: $value');
+              },
+            ),
+          ),
+          Expanded(
+            child: Container(
+              color: Theme.of(context).colorScheme.primaryContainer,
+              child: GeneratorPage(),
+
+            ),
+          )
+        ]
+      )
+    )
   }
 }
 
+class GeneratorPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context )
+}
 class BigCard extends StatelessWidget {
   const BigCard({
     super.key,
